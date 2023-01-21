@@ -1,27 +1,12 @@
-import HeroImage from '../assets/restauranfood.jpg'
-import LemonDessert from '../assets/lemondessert.jpg'
-import GreekSalad from '../assets/greeksalad.jpg'
+import HeroImage from '../../assets/restauranfood.jpg'
+import LemonDessert from '../../assets/lemondessert.jpg'
+import GreekSalad from '../../assets/greeksalad.jpg'
+import Card from '../../components/Card';
+import Pill from '../../components/Pill';
+import {
+  Link
+} from "react-router-dom";
 
-function Pills ({label}){
-  return(
-    <div className='pill bg-gray'>
-      <p className="text-secondary text-extrabold">{label}</p>
-    </div>
-  )
-}
-
-function Card ({title, description, amount, img}) {
-  return(
-    <div className='card-container'>
-      <div>
-        <h4 className='header-4 text-bold'>{title}</h4>
-        <p className='color-secondary font-karla text-clamp'>{description}</p>
-        <p className='color-secondary font-karla text-medium'>${amount}</p>
-      </div>
-      <img src={img} alt='dinner' className="card-img" />
-    </div>
-  )
-}
 
 function Main() {
   const tags = ["Lunch", "Mains", "Desserts", "A La Carte", "Specials"]
@@ -75,14 +60,16 @@ function Main() {
             </p>
             <img className='hero-img' alt="hero" src={HeroImage}/>
           </div>
+          <Link to={'/booking'}>
             <button className="button">Reserve a table</button>
+          </Link>
           </div>
         </section>
         <section>
           <h3 className="header-3 text-extrabold">ORDER FOR DELIVERY!</h3>
           <div className='pill-container'>
             {tags.map((item,idx) => (
-              <Pills key={idx} label={item} />
+              <Pill key={idx} label={item} />
             ))}
           </div>
           <div>

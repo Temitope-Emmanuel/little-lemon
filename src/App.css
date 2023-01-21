@@ -8,6 +8,17 @@ p {
   padding: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Karla', serif;
+  background-color: transparent;
+}
+
 .color-primary {
   color: #F4CE14;
 }
@@ -28,6 +39,11 @@ p {
   background-color: #495E57;
 }
 
+.bg-primary {
+  background-color: #F4CE14;
+}
+
+
 .bg-gray {
   background-color: #EDEFEE;
 }
@@ -42,6 +58,26 @@ p {
 
 .text-bold {
   font-weight: 700;
+}
+
+.text-medium {
+  font-weight: 300;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .text-clamp {
@@ -80,6 +116,21 @@ p {
   font-size: 18px;
   margin: 10px 0;
   font-family: 'Karla', serif;
+}
+
+.header-6 {
+  font-size: 16px;
+  margin: 10px 0;
+  font-family: 'Karla', serif;
+  font-weight: 700;
+}
+
+.font-13 {
+  font-size: 13px;
+}
+
+.font-18 {
+  font-size: 18px;
 }
 
 .hero {

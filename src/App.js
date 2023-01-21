@@ -1,17 +1,26 @@
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 import './App.css';
-import Header from './components/Header'
-import Nav from './components/Nav'
-import Main from './components/Main'
-import Footer from './components/Footer'
+import Home from './pages/Home';
+import Booking from './pages/Booking'
 
 function App() {
   return (
-    <>
-    <Header/>
-    <Nav/>
-    <Main/>
-    <Footer/>
-    </>
+   <Router>
+    <Switch>
+      <Route path="/booking">
+        <Booking/>
+      </Route>
+      <Route path="/home">
+        <Home/>
+      </Route>
+    </Switch>
+   </Router>
   );
 }
 

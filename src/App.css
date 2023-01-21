@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+body {
+  max-width: 450px;
+  margin: auto
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.color-primary {
+  color: #F4CE14;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.color-gray {
+  color: #EDEFEE;
+}
+
+.color-white {
+  color: white
+}
+
+.color-secondary {
+  color: #495E57;
+}
+
+.bg-secondary {
+  background-color: #495E57;
+}
+
+.bg-gray {
+  background-color: #EDEFEE;
+}
+
+.font-karla {
+  font-family: 'Karla', serif;
+}
+
+.text-extrabold {
+  font-weight: 800;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.header-1 {
+  margin: 0;
+  font-size: 64px;
+  line-height: 40px;
+  font-weight: medium;
+  font-family: 'Markazi Text', serif;
+}
+
+.header-2 {
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Markazi Text', serif;
+}
+
+.header-3 {
+  font-size: 20px;
+  font-family: 'Karla', serif;
+}
+
+.header-4 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-family: 'Karla', serif;
+}
+
+.hero {
+  padding: 16px;
+}
+
+.hero-subcontainer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #F4CE14;
+  color: #000000;
+  border-radius: 16px;
+  border:none;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.hero-img {
+  border-radius: 16px;
+  height: 152px;
+  width: 147px;
+}
+
+.pill-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.pill {
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.card-container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 0;
+  border-top: solid 1px #EDEFEE;
+  border-bottom: solid 1px #EDEFEE;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img {
+  width: 83px;
+  height: 83px;
+  object-fit: contain;
+  margin-left: 20px;
 }

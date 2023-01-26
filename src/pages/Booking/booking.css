@@ -64,3 +64,17 @@
 .contact-btn > img {
     margin-right: 10px;
 }
+
+.contact-info-subcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.contact-info {
+    padding: 5px;
+    min-width: 40%;
+    margin: 5px;
+    border-radius: 5px;
+}

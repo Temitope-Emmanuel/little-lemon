@@ -1,53 +1,28 @@
-import {useState} from 'react';
 import TimeSelect from "../../components/TimeSelect";
 
-const date = [
-    {
-        day: "Sun",
-        date: 10
-    },
-    {
-        day: "Mon",
-        date: 11
-    },
-    {
-        day: "Tue",
-        date: 12
-    },
-    {
-        day: "Wed",
-        date: 13
-    },
-    {
-        day: "Thurs",
-        date: 14
-    },
-    {
-        day: "Fri",
-        date: 15
-    },
-    {
-        day: "Sat",
-        date: 16
-    }
-]
 
-function DateSelector () {
-    const [currentTime, setCurrentTime] = useState('');
+function DateSelector ({date, time, updateDate, updateTime}) {
     return(
         <div className="bg-secondary section-subcontainer">
             <div>
-                <h5>Date</h5>
+                <h5 className="header-6" data-testid="date-selector-title">Date</h5>
             </div>
             <div className='time-select-subcontainer'>
                 {
-                    date.map(({date, day},idx) => 
-                    <TimeSelect key={idx} active={currentTime === date}
+                    date.map(({date, day, active},idx) =>
+                    <TimeSelect key={idx} active={active}
                     label={date} subLabel={day}
-                    onClick={() => setCurrentTime(date)}
+                    onClick={() => updateDate(date)}
                     />
                     )
                 }
+            </div>
+            <h6 className="header-6">Time</h6>
+            <div className='time-select-subcontainer'>
+                {time.map(({time, active}, idx) => (
+                    <TimeSelect label={time} active={active}
+                     key={idx} onClick={() => updateTime(time)} />
+                ))}
             </div>
         </div>
     )

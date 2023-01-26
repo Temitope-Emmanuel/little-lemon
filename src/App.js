@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 
 import './App.css';
@@ -13,12 +14,9 @@ function App() {
   return (
    <Router>
     <Switch>
-      <Route path="/booking">
-        <Booking/>
-      </Route>
-      <Route path="/home">
-        <Home/>
-      </Route>
+      <Route path="/booking" component={Booking}/>
+      <Route path="/home" component={Home}/>
+      <Redirect to="/home" />
     </Switch>
    </Router>
   );

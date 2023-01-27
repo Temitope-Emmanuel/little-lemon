@@ -1,6 +1,6 @@
-function TimeSelect ({label,active, subLabel, onClick}) {
+function TimeSelect ({label,active, subLabel, onClick, testId}) {
     return(
-        <div className='bg-gray time-select-container d-flex direction-column align-center' onClick={onClick} style={{
+        <div data-testid={testId} className='bg-gray time-select-container d-flex direction-column align-center' onClick={onClick} style={{
             backgroundColor: active ? '#000000' : '#EDEFEE',
             color: active ? '#F4CE14' : '#000000'
         }}>

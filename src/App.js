@@ -8,7 +8,7 @@ import {
 
 import './App.css';
 import Home from './pages/Home';
-import Booking from './pages/Booking'
+import Booking from './pages/BookingForm'
 
 function App() {
   return (

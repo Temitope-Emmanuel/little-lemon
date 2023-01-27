@@ -11,6 +11,7 @@ function DateSelector ({date, time, updateDate, updateTime}) {
                 {
                     date.map(({date, day, active},idx) =>
                     <TimeSelect key={idx} active={active}
+                    testId={`date-select-${idx}`}
                     label={date} subLabel={day}
                     onClick={() => updateDate(date)}
                     />
@@ -21,6 +22,7 @@ function DateSelector ({date, time, updateDate, updateTime}) {
             <div className='time-select-subcontainer'>
                 {time.map(({time, active}, idx) => (
                     <TimeSelect label={time} active={active}
+                    testId={`time-select-${idx}`}
                      key={idx} onClick={() => updateTime(time)} />
                 ))}
             </div>
